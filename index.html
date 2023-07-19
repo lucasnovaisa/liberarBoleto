@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./assets/css/style.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <title>Liberação de Acesso</title>
+    </head>
+    <body>
+        <main id="container">
+            <section id="img">
+                <img
+                    src="./assets/images/undraw_completed_03xt.svg"
+                    alt=""
+                />
+            </section>
+
+            <section id="liberacao">
+                <button id="authButton"> Autenticar </button>
+
+                <div id="messageBox" style="display: none;">
+                     <p id="messageDisplay"></p>
+                </div>
+            
+                <form id="form">
+                    <h1 id="title">Liberação de Acesso</h1>
+                    <div class="input-box">
+                        <label for="cpf"> CPF </label>
+                        <div class="input-field">
+                            <i class="fa-solid fa-arrow-up-9-1"></i>
+                            <input type="number" id="cpf" required />
+                        </div>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="height"> Plataforma </label>
+                        <div class="plataforma">
+                            <input type="radio" id="portalba" name="plataforma" value="portalba">
+                            <label for="portalba">Portal BA</label><br>
+                            <input type="radio" id="virtual" name="plataforma" value="virtual">
+                            <label for="virtual">CFC Virtual</label><br>
+                        </div>
+                    </div>
+                    <button id="liberar">Liberar</button>
+                </form>
+
+                <div id="infos" class="hidden">
+                    <div id="result">
+                        <div id="description">
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+    <script src="./assets/js/script.js"></script>
+</html>
