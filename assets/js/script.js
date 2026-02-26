@@ -1,9 +1,11 @@
 // Função para fazer a requisição de autenticação
 async function autenticar() {
-    const url = "https://cfcvirtual.startbio.com.br/agendamentoonline/api/v1/auth/login";
+    // URL da API
+    const url = ""; 
     const body = {
-        username: "83676805534",
-        password: "83676805534"
+        // Usuário e Senha
+        username: "",
+        password: ""
     };
 
     try {
@@ -43,7 +45,6 @@ function exibirMensagem(mensagem) {
 // Associar o evento de clique ao botão de autenticação
 const authButton = document.getElementById("authButton");
 authButton.addEventListener("click", autenticar);
-
 
 // Função para validar o CPF
 function validarCPF(cpf) {
@@ -96,9 +97,9 @@ async function liberarPlataforma(event) {
     let apiUrl = "";
 
     if (plataformaSelecionada === "portalba") {
-        apiUrl = `https://cfcvirtual.startbio.com.br/agendamentoonline/api/v1/candidatosituacaofinanceira/paid/${cpf}`;
+        apiUrl = `https://url da api/paid/${cpf}`;
     } else if (plataformaSelecionada === "virtual") {
-        apiUrl = `https://cfcvirtual.startbio.com.br/agendamento/api/v1/candidatosituacaofinanceira/paid/${cpf}`;
+        apiUrl = `https://url da api/paid/${cpf}`;
     } else {
         exibirMensagem("Selecione uma plataforma.");
         return;
@@ -130,5 +131,3 @@ async function liberarPlataforma(event) {
 // Associar o evento de clique ao botão de liberação
 const liberarButton = document.getElementById("liberar");
 liberarButton.addEventListener("click", liberarPlataforma);
-
-console.log(access_token);
